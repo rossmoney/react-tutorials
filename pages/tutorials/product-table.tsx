@@ -1,16 +1,16 @@
 import type { ReactElement } from "react";
-import Layout from "../../src/layouts/sidebar";
+import SidebarLayout from "../../src/layouts/sidebar";
 import type { NextPageWithLayout } from "../_app";
 import routes from "../../src/routes/tutorials";
 
-import FilterableProductTable from "../../src/product-table/filterable-product-table";
+import FilterableProductTable from "../../src/tutorials/product-table/filterable-product-table";
 
 const Page: NextPageWithLayout = () => {
   return <FilterableProductTable products={PRODUCTS} />;
 }
 
 Page.getLayout = function getLayout(page: ReactElement) {
-  return <Layout links={routes}>{page}</Layout>;
+  return <SidebarLayout links={routes}>{page}</SidebarLayout>;
 };
 
 export default Page;

@@ -3,6 +3,7 @@ import BaseLayout from "./base";
 import Grid from "@mui/material/Grid2";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import { JSX } from "react/jsx-runtime";
 
 const GridItem = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -15,7 +16,7 @@ const GridItem = styled(Paper)(({ theme }) => ({
   }),
 }));
 
-export default function Tutorials({ children, links }: { children: React.ReactNode, links: Array<{ href: string, text: string }> }) {
+export default function SidebarLayout({ children, links }: { children: React.ReactNode, links: Array<{ href: string, text: string, icon: JSX.Element }> }) {
   return (
     <BaseLayout>
       <Grid container spacing={2}>
