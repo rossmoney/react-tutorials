@@ -3,6 +3,7 @@ import Link from "../src/Link";
 import type { ReactElement } from "react";
 import Layout from "../src/layouts/base";
 import type { NextPageWithLayout } from "./_app";
+import routes from "../src/routes/tutorials";
 
 const Page: NextPageWithLayout = () => {
   return (
@@ -39,8 +40,8 @@ export default Page;
 
 const resources = [
   {
-    href: "https://reactrouter.com/docs",
-    text: "React Router Docs",
+    href: routes[0].href,
+    text: routes[0].text,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -59,8 +60,8 @@ const resources = [
     ),
   },
   {
-    href: "/tutorials",
-    text: "Tutorials I have completed",
+    href: routes[1].href,
+    text: routes[1].text,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -79,3 +80,4 @@ const resources = [
     ),
   },
 ];
+

@@ -1,4 +1,4 @@
-import Sidebar from "../Sidebar";
+import LinkList from "../LinkList";
 import BaseLayout from "./base";
 import Grid from "@mui/material/Grid2";
 import { styled } from "@mui/material/styles";
@@ -15,14 +15,14 @@ const GridItem = styled(Paper)(({ theme }) => ({
   }),
 }));
 
-export default function Tutorials({ children }: { children: React.ReactNode }) {
+export default function Tutorials({ children, links }: { children: React.ReactNode, links: Array<{ href: string, text: string }> }) {
   return (
     <BaseLayout>
       <Grid container spacing={2}>
         <Grid size={3}>
           <GridItem>
             <nav aria-label="main">
-              <Sidebar links={links} />
+              <LinkList links={links} />
             </nav>
           </GridItem>
         </Grid>
@@ -37,14 +37,3 @@ export default function Tutorials({ children }: { children: React.ReactNode }) {
     </BaseLayout>
   );
 }
-
-const links = [
-  {
-    href: "/tutorials/noughts-and-crosses",
-    text: "Noughts and Crosses Game",
-  },
-  {
-    href: "/tutorials/product-table",
-    text: "Filterable Product Table",
-  },
-];

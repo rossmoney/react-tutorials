@@ -3,7 +3,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 
-export default function Sidebar(props: { links: Array<{ href: string, text: string }> }) {
+export default function LinkList(props: { links: Array<{ href: string, text: string }> }) {
   return (
     <List>
       {props.links.map(({ href, text }) => (
